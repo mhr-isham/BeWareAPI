@@ -10,7 +10,7 @@ const options = {
       description: 'Your travelbuddy social media API for sharing travel safety + tips + experiences',
     },
     servers: [
-      { url: 'http://localhost:3000', description: 'Local Server, generally on PORT 3000' },
+      { url: 'https://bewareapi.onrender.com/', description: 'Local Server, generally on PORT 3000' },
     ],
     components: {
       securitySchemes: {
@@ -30,5 +30,6 @@ const swaggerSpec = swaggerJsdoc(options);
 function swaggerDocs(app) {
   app.use('/interactive_api', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 }
+
 
 module.exports = swaggerDocs;
